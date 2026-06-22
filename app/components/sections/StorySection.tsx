@@ -31,12 +31,12 @@ export function StorySection() {
             Boho Crochet Studio started with a brief pause in a world that rushes by. For me, crochet is an art form—a gentle weaving together of time, using only a single hook and a strand of thread. Through intention and patience, I wanted to create a sense of simple, tangible warmth.
           </p>
           <p className="mt-5 border-l-2 border-(--color-primary) pl-4 text-lg italic">
-            "Made to be held, used, and loved for years."
+            "Every stitch is a meditation, a connection between hands and heritage."
           </p>
         </div>
         <motion.div style={{ y: imageY }} className="relative md:flex hidden">
           <Image src={storyImage2} alt="Story" width={200} height={200} className="absolute bottom-0 right-0" />
-          <div className="absolute bottom-6 -right-6 -z-1 w-[200px] h-[125px] bg-(--color-primary) opacity-20"></div>
+          <div className="absolute bottom-6 -right-6 -z-1 w-50 h-[125px] bg-(--color-primary) opacity-20"></div>
         </motion.div>
       </div>
     </section>

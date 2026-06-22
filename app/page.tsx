@@ -5,64 +5,66 @@ import {
   MaterialsSection,
   NavSection,
   StorySection,
-  TestimonialsSection,
 } from "./components/sections";
+
+import CollectionFour from "./assets/collection-four.png";
+import CollectionThree from "./assets/collection-three.jpg";
+import CollectionTwo from "./assets/collection-two.jpg";
+
+import MaterialOne from "./assets/material-one.png";
+import MaterialThree from "./assets/material-three.png";
+import MaterialTwo from "./assets/material-two.png";
+import { WorkshopSection } from "./components/sections/WorkshopSection";
 
 export default function Home() {
   const navItems = [
     { label: "Collection", href: "#collection" },
     { label: "Story", href: "#story" },
     { label: "Materials", href: "#materials" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Workshop", href: "#workshop" },
   ];
 
   const collections = [
     {
-      title: "Luna Throws",
-      description: "Soft, textured blankets for calm and cozy evenings.",
+      title: "Nomad Tote",
+      src: CollectionFour
     },
     {
-      title: "Desert Shawls",
-      description: "Light wraps with airy stitches and earthy boho tones.",
+      title: "Desert Shawl",
+      src: CollectionTwo,
     },
     {
       title: "Studio Baskets",
-      description: "Functional handcrafted storage with artisan details.",
-    },
+      src: CollectionThree
+    }
   ];
 
   const materials = [
-    "Organic cotton yarn for breathability and softness",
-    "Natural wool blends for warmth and long-term durability",
-    "Low-impact dyes inspired by clay, sand, and desert skies",
-  ];
-
-  const testimonials = [
     {
-      quote:
-        "Every piece feels like it was made just for my home. The quality is beautiful.",
-      author: "Mina K.",
+      title: "01. curated environment",
+      label: "Room to breathe, space to create.",
+      src: MaterialOne
     },
     {
-      quote:
-        "The patterns are easy to follow and still look premium when finished.",
-      author: "Thandar A.",
+      title: "02. natural fibers",
+      label: "Organic cotton yarns for breathability and softness.",
+      src: MaterialTwo
     },
     {
-      quote:
-        "Warm colors, rich texture, and thoughtful packaging. Loved everything.",
-      author: "Elliot S.",
-    },
+      title: "03. low-impact dyes",
+      label: "Colors inspired by clay, sand, and desert skies.",
+      src: MaterialThree
+    }
   ];
 
   return (
-    <main className="min-h-screen bg-(--color-secondary) text-(--color-neutral)">
+    <main className="min-h-screen bg-background text-foreground">
       <NavSection navItems={navItems} />
       <HeroSection />
       <CollectionSection collections={collections} />
       <StorySection />
       <MaterialsSection materials={materials} />
-      <TestimonialsSection testimonials={testimonials} />
+      <WorkshopSection />
       <FooterSection navItems={navItems} />
     </main>
   );

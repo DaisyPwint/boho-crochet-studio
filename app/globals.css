@@ -5,6 +5,7 @@
   --color-secondary: #f9f6f1;
   --color-tertiary: #d1c7bd;
   --color-neutral: #1a1a1a;
+  --color-accent: #ffb59e;
 }
 
 @theme inline {
