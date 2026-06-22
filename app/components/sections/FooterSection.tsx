@@ -8,14 +8,15 @@ type FooterSectionProps = {
 };
 
 export function FooterSection({ navItems }: FooterSectionProps) {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-(--color-primary) py-14 text-background">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 md:grid-cols-4">
         <div className="md:col-span-2">
-          <h3 className="text-2xl">Boho Crochet Studio</h3>
+          <h3 className="text-6xl uppercase text-accent mb-4">Boho</h3>
           <p className="mt-3 max-w-md text-sm/6 text-[color-mix(in_srgb,var(--color-secondary),black_15%)]">
-            Cozy textures, modern boho palette, and handmade quality that turns
-            everyday spaces into comforting places.
+            &copy; {currentYear} Boho Crochet Studio. <br />
+            Hand-crafted with intention and love.
           </p>
         </div>
         <div>
